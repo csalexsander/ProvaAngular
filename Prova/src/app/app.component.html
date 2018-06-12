@@ -1,0 +1,77 @@
+<div class="content-fluid">
+  <div class="col-md-12">
+    <div class="row">
+      <div class="card col-md-12">
+        <div class="card-body">
+          <h3 class="card-title">Cadastro Pessoa</h3>
+          <div class="col-md 10" align="center">
+            <div class="card">
+              <div class="card-body" align="left">
+                <form>
+                  <fieldset>
+                     <div class="row col-md-12">
+                       <div class="form-group col-md-4" style="padding-left:0px">
+                         <label for="CPF">CPF</label>
+                         <input type="number" value="{{Pessoa.CPF}}" (keyup)="ObtemCPF($event)" name="CPF" id="CPF" class="form form-control">
+                       </div>
+                       <div class="form-group col-md-8" style="padding-right: 0px;">
+                         <label for="NomeCompleto">Nome Completo</label>
+                         <input type="text" value="{{Pessoa.NomeCompleto}}" (keyup)="ObtemNomeCompleto($event)" name="NomeCompleto" id="NomeCompleto" class="form form-control">
+                       </div>
+                     </div>
+                     <div class="row col-md-12">
+                       <div class="form-group col-md-6" style="padding-left:0px">
+                         <label for="NomeCompletoPai">Nome Completo do Pai</label>
+                         <input type="text" value="{{Pessoa.NomePai}}" (keyup)="ObtemNomeCompletoPai($event)" name="NomeCompletoPai" id="NomeCompletoPai" class="form form-control">
+                       </div>
+                       <div class="form-group col-md-6" style="padding-right: 0px;">
+                         <label for="NomeCompletoMae">Nome Completo da Mae</label>
+                         <input type="text" value="{{Pessoa.NomeMae}}" (keyup)="ObtemNomeCompletoMae($event)" name="NomeCompletoMae" id="NomeCompletoMae" class="form form-control">
+                       </div>
+                     </div>
+                     <div class="row col-md-12">
+                       <input style="margin-bottom: 5px" (click)="SalvarDados()" type="button" value="Salvar" class="btn btn-success col-md-12">
+                       <input style="margin-top: 5px" (click)="LimparCampos()" type="button" value="Cancelar" class="btn btn-danger col-md-12">
+                     </div>
+                  </fieldset>
+                </form>
+                <br>
+                  <fieldset>
+                   <div class="row col-md-12">
+                    <table class="table">
+                      <thead class="thead-dark">
+                        <tr>
+                          <th scope="col">CPF</th>
+                          <th scope="col">Nome Completo</th>
+                          <th scope="col">Nome da Mae</th>
+                          <th scope="col">Nome do Pai</th>
+                          <th scope="col">Remover</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <th scope="row">012.123.456-78</th>
+                          <td>João da Silva</td>
+                          <td>Maria da Penha</td>
+                          <td>José da Silva</td>
+                          <td><a href="javascript:void(0)">Remover</a></td>
+                        </tr>
+                        <tr>
+                          <th scope="row">012.123.456-78</th>
+                          <td>Santana da Silva</td>
+                          <td>Julia da Silva</td>
+                          <td>Marcelo Pereira</td>
+                          <td><a href="javascript:void(0)">Remover</a></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                   </div>
+                  </fieldset>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>      
+    </div>
+  </div>
+</div>
